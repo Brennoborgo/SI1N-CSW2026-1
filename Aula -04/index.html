@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula-04</title>
 </head>
+
 <body>
     <h1> Ptincipais Formatações </h1>
     <h2>Negrito/Destaque</h2>
@@ -12,14 +14,54 @@
     <p>Aqui temos um texto em italico ou em <em> enfase</em></p>
     <h1> Texto Marcado</h1>
     <p>Aqui tem um <mark style="background-color: darkgreen;"> Texto marcado </mark>
-        <p> Aqui tem Um <mark>Texto Marcado</mark></p>
+    <p> Aqui tem Um <mark>Texto Marcado</mark></p>
 
-        <h1> Grande Pequeno</h1>
-        <p> Estamos  Trabalhando aqui com um <big> Texto grande</big> e aqui com um <small>Texto pequeno </small></p>
-        <h1>Deletado e riscado </h1>
-        <p>Aqui tem um texto <del> deletado</del> e aqui um <strike> riscado</strike></p>
+    <h1> Grande Pequeno</h1>
+    <p> Estamos Trabalhando aqui com um <big> Texto grande</big> e aqui com um <small>Texto pequeno </small></p>
+    <h1>Deletado e riscado </h1>
+    <p>Aqui tem um texto <del> deletado</del> e aqui um <strike> riscado</strike></p>
+    <h2> Texto Inserido</h2>
+    <p> nesta frase vamos demonstrar como <ins> destacar um texto inserido</ins>na frase de forma semantica </p>
+    <h2>Texto sobrescrito</h2>
+    <p> vamos desmontrar uma formula de equação do segundo grau ax <sup>2</sup> + bx + c = 0 usando tag sup</p>
+    <h2> Texto subescrito</h2>
+    <p>vamos desmonstrar o texto subescrito com a formula da agua <sub>H2O</sub></p>
+    <h2>Trecho de Codigo Fonte </h2>
+    <pre><code>import math
 
-
+    def resolver_segundo_grau():
+    print("--- Calculadora de Equação de 2º Grau ---")
     
+    # Entrada de dados
+    a = float(input("Digite o valor de a: "))
+    
+    if a == 0:
+        print("O valor de 'a' não pode ser zero em uma equação de 2º grau.")
+        return
+
+    b = float(input("Digite o valor de b: "))
+    c = float(input("Digite o valor de c: "))
+
+    # Cálculo do Delta (Δ = b² - 4ac)
+    delta = b**2 - 4*a*c
+    print(f"\nDelta (Δ) = {delta}")
+
+    if delta < 0:
+        print("A equação não possui raízes reais (Delta negativo).")
+    elif delta == 0:
+        x = -b / (2 * a)
+        print(f"A equação possui uma única raiz real: x = {x}")
+    else:
+        # Bhaskara: x = (-b ± √Δ) / 2a
+        x1 = (-b + math.sqrt(delta)) / (2 * a)
+        x2 = (-b - math.sqrt(delta)) / (2 * a)
+        print(f"As raízes são: x1 = {x1:.2f} e x2 = {x2:.2f}")
+
+# Executa a função
+resolver_segundo_grau()</code></pre>
+
+
+
 </body>
+
 </html>
