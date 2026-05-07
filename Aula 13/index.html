@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercícios Flexbox</title>
+  <style>
+
+    /* ===== EXERCÍCIO 1 ===== */
+    .container1 {
+      display: flex;
+      background-color: lightblue;
+      padding: 20px;
+    }
+
+    /* ===== EXERCÍCIO 2 ===== */
+    .container2 {
+      display: flex;
+      background-color: lightyellow;
+      padding: 10px;
+      gap: 10px;
+    }
+
+    .container2 .item {
+      flex-grow: 1;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px solid transparent;
+    }
+
+    .container2 .item:hover {
+      border-bottom: 4px solid black;
+    }
+
+    .vermelho  { background-color: salmon; }
+    .verde     { background-color: lightgreen; }
+    .amarelo   { background-color: lightyellow; border: 1px solid #ccc; }
+
+    /* ===== EXERCÍCIO 3 ===== */
+    .container3 {
+      display: flex;
+      background-color: lavender;
+      padding: 10px;
+      gap: 10px;
+    }
+
+    .container3 .item {
+      flex-grow: 1;
+      padding: 20px;
+      text-align: center;
+      background-color: lightblue;
+      cursor: pointer;
+    }
+
+    .container3 .especial {
+      flex-grow: 2;
+      background-color: orange;
+    }
+
+    .container3 .item:active {
+      background-color: royalblue;
+      color: white;
+    }
+
+    .container3 .especial:active {
+      background-color: red;
+      color: white;
+    }
+
+    /* ===== EXERCÍCIO 4 ===== */
+    .container4 {
+      display: flex;
+      justify-content: flex-end;
+      background-color: lightgray;
+      padding: 10px;
+      gap: 10px;
+    }
+
+    .container4 .item {
+      padding: 15px 25px;
+      background-color: white;
+      border: 1px solid #aaa;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>Exercício 1 - Contêiner Flexbox simples</h2>
+  <div class="container1">
+    <p>Eu sou um contêiner flexbox!</p>
+  </div>
+
+  <br>
+
+  <h2>Exercício 2 - Três itens com flex-grow: 1</h2>
+  <div class="container2">
+    <div class="item vermelho">Item 1</div>
+    <div class="item verde">Item 2</div>
+    <div class="item amarelo">Item 3</div>
+  </div>
+
+  <br>
+
+  <h2>Exercício 3 - Terceiro item com flex-grow: 2</h2>
+  <div class="container3">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item especial">Item 3 (maior)</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+  </div>
+
+  <br>
+
+  <h2>Exercício 4 - Itens alinhados à direita</h2>
+  <div class="container4">
+    <div class="item">Item A</div>
+    <div class="item">Item B</div>
+    <div class="item">Item C</div>
+  </div>
+
+</body>
+</html>
