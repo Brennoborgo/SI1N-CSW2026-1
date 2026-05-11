@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cards Flexbox</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+      max-width: 960px;
+      width: 100%;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 28px 24px;
+      flex: 1 1 250px;
+      max-width: 300px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h2 {
+      font-size: 1.3rem;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555555;
+      line-height: 1.6;
+      flex: 1; /* empurra o botão para o fundo */
+      margin-bottom: 24px;
+    }
+
+    .card button {
+      background-color: #2563eb;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      margin-top: auto; /* garante que o botão fique sempre no fundo */
+    }
+
+    .card button:hover {
+      background-color: #1d4ed8;
+    }
+
+    /* Telas pequenas: cards empilhados */
+    @media (max-width: 640px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>Item 1 </h2>
+      <p>Exemplo de crad com texto simples </p>
+      <button>Saiba mais</button>
+    </div>
+
+    <div class="card">
+      <h2>Item 2</h2>
+      <p> exemplo de mostrar como os cards funciona</p>
+      <button>Saiba mais</button>
+    </div>
+
+    <div class="card">
+      <h2>Item 3</h2>
+      <p>Mais um card para completar o layout </p>
+      <button>Saiba mais</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
